@@ -2,22 +2,26 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 
-const network = NETWORK.eth;
+const network = NETWORK.sol;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "Mononoke";
+const description = "Mononoke is cosmic being";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
   symbol: "YC",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  external_url: "",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
-      share: 100,
+      address: "edokPbB4Hfnt8BXtg7HicoPHER4QC7Fy5B3Ry1q6un3",
+      share: 50,
     },
+    {
+      address: "3rGtHooRGarQdWqgPishUZyTVMy2xbF6ewsUw3rxSWQR",
+      share: 50,
+    }
   ],
 };
 
@@ -26,13 +30,7 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 5,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "real_name" },
     ],
   },
 ];
@@ -43,7 +41,7 @@ const debugLogs = false;
 
 const format = {
   width: 512,
-  height: 512,
+  height: 640,
   smoothing: false,
 };
 
@@ -82,7 +80,7 @@ const extraMetadata = {};
 
 const rarityDelimiter = "#";
 
-const uniqueDnaTorrance = 10000;
+const uniqueDnaTorrance = 5;
 
 const preview = {
   thumbPerRow: 5,
